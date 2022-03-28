@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pace JS | Preloader</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="pace.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+<body>
+    
+        
+
+        <div id="preloader">
+            
+        </div>
+        <div id="container", class="title">
+	
+            <div id="logo">
+                <h1>
+                
+                    <h1>MEBLE NA WYMIAR</h1>
+                
+                
+                </h1>
+            </div>
+            <div id="menu">
+            
+            <a href="index.html"><strong> HOME</strong></a>
+            <a href="cennik.html"><strong> CENNIK</strong></a>
+            <a href="kont.html"><strong> KONTAKT</strong></a>
+            
+            </div>
+        
+            
+            
+            <div id="content">
+            
+            </div>
+            <a href="img/1.png" target="_blank"><img src="img/1.png" width="20%" class="lewe1"></a>
+			
+			<p> Postać z mitologii Tolkiena czyli Gandalf Portret wykonany ołówkiem na formacie 26x19cm</p>
+			<p class="prawep1"> Theoden, król Rohanu jest jedną z ulubionych postaci ze Śródziemia artysty. Portret wykonany ołówkiem na formacie 26x19cm</p>
+			<a href="img/2.png" target="_blank"><img src="img/2.png" width="20%" class="prawe1"></a>
+			<a href="img/3.png" target="_blank"><img src="img/3.png" width="20%" class="lewe2"></a>
+			<p class="prawep2"> Portret wykonany ołówkiem na formacie A4 </p>
+			<a href="img/4.png" target="_blank"><img src="img/4.png" width="20%" class="prawe1"></a>
+			<p class="prawep3"> Portret przedstawiający Fryderyka Nietzschego. Persona na pewno zasługująca na coś więcej niż szybki portret na formacie 14x9 cm</p>
+		    <a href="img/5.png" target="_blank"><img src="img/5.png" width="20%" class="lewe3"></a>
+			<p class="prawep4"> Portret przedstawiający Jordana B. Petersona. Peterson wykonany ołówkiem w szkicowniku. Format na jakim został wykonany to 26x19cm.</p>
+		    <a href="img/6.png" target="_blank"><img src="img/6.png" width="20%" class="prawe2"></a>
+			<p class="prawep5">George Orwell wybitny pisarz i publicysta. Chyba każdy z nas słyszał jego najsłynniejszych dziełach czyli o "Folwarku zwierzęcym" i "roku1984".</br> Portret wykonany ołówkiem na formacie 26x19cm</p>
+		    <a href="img/7.png" target="_blank"><img src="img/7.png" width="20%" class="prawe1"></a>
+			<p class="prawep6">Wykonany ołówkiem na formacie 26x19cm portret przedstawiający Mistrza Tolkiena.</p>
+			<a href="img/8.png" target="_blank"><img src="img/8.png" width="20%" class="prawe3"></a>
+			<p class="prawep6"> Szachowy rysunek przedstawiający Arcymistrza, Magnusa Carlsena czyli najlepszego szachistę na świecie.</br> Rysunek wykonany ołówkiem na małym w przeciwieństwie do wielkości osoby przedstawionej, na nim formacie, bo to zaledwie 10x14 cm</p>
+		
+            
+            
+            
+            <div id="footer">
+                Strona Wykonana przez Kajetana Kowalskiego ©
+            </div>
+        
+        </div>
+        
+        
+        
+        
+        
+        <script>
+
+        paceOptions = {
+        ajax: true,
+        document: true,
+        eventLag: false
+        };
+
+        Pace.on('done', function() {
+        $('.p').delay(400).animate({top: '30%', opacity: '0'}, 3000, $.bez([0.19,1,0.22,1]));
+
+
+        $('#preloader').delay(500).animate({top: '-100%'}, 2000, $.bez([0.19,1,0.22,1]));
+
+        TweenMax.from(".title", 2, {
+             delay: 1.8,
+                  y: 10,
+                  opacity: 0,
+                  ease: Expo.easeInOut
+            })
+       });
+
+      </script>
+
+</body>
+</html>
